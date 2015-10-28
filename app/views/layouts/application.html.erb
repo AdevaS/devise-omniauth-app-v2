@@ -7,9 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h4>application.html.erb</h4>
 
-<%= yield %>
+  <h4>application.html.erb</h4>
+
+  <%= render 'layouts/messages' %>
+  <%= yield %>
 
 </body>
 </html>
