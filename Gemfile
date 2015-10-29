@@ -29,6 +29,9 @@ gem 'devise'
 # Omniauth for facebook authentication
 gem 'omniauth-facebook'
 
+# Layout: Admin-LTE
+gem 'adminlte-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
