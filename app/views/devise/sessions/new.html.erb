@@ -1,0 +1,64 @@
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../.."><b>AdevaS</b>ystem</a>
+  </div><!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group has-feedback">
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "E-mail" %>
+        <%= content_tag :span, class: "glyphicon glyphicon-envelope form-control-feedback" do -%>
+        <% end -%>
+      </div>
+      <div class="form-group has-feedback">
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+        <%= content_tag :span, class: "glyphicon glyphicon-lock form-control-feedback" do -%>
+        <% end -%>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <% if devise_mapping.rememberable? -%>
+            <div class="checkbox icheck">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+        </div><!-- /.col -->
+        <div class="col-xs-4">
+          <%= f.submit "Log in", class: "btn btn-primary btn-block btn-flat" %>
+        </div><!-- /.col -->
+      </div>
+    <% end %>
+
+    <%- if devise_mapping.omniauthable? %>
+      <div class="social-auth-links text-center">
+        <p>- OR -</p>
+        <%= link_to omniauth_authorize_path(resource_name, :facebook), class: "btn btn-block btn-social btn-facebook btn-flat" do %>
+          <i class="fa fa-facebook"></i>Sign in using Facebook
+        <% end %>
+        <%= link_to omniauth_authorize_path(resource_name, :facebook), class: "btn btn-block btn-social btn-google btn-flat" do %>
+          <i class="fa fa-google-plus"></i>Sign in using Google+
+        <% end %>
+      </div><!-- /.social-auth-links -->
+    <% end -%>
+
+    <%= render "devise/shared/links" %>
+
+  </div><!-- /.login-box-body -->
+</div><!-- /.login-box -->
+
+<!-- jQuery 2.1.4 -->
+<script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
