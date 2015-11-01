@@ -1,0 +1,42 @@
+<li class="dropdown user user-menu">
+  <!-- Menu Toggle Button -->
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <!-- The user image in the navbar-->
+    <%= image_tag current_user.image, class: "user-image" %>
+    <!-- <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> -->
+    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+    <%= current_user.name %>
+    <!-- <span class="hidden-xs">Alexander Pierce</span> -->
+  </a>
+  <ul class="dropdown-menu">
+    <!-- The user image in the menu -->
+    <li class="user-header">
+      <%= image_tag current_user.image, class: "img-circle" %>
+      <p>
+        <%= current_user.name %>
+        <small>Member since <%= current_user.created_at %></small>
+      </p>
+    </li>
+    <!-- Menu Body -->
+    <!-- <li class="user-body">
+      <div class="col-xs-4 text-center">
+        <a href="#">Followers</a>
+      </div>
+      <div class="col-xs-4 text-center">
+        <a href="#">Sales</a>
+      </div>
+      <div class="col-xs-4 text-center">
+        <a href="#">Friends</a>
+      </div>
+    </li> -->
+    <!-- Menu Footer-->
+    <li class="user-footer">
+      <div class="pull-left">
+        <a href="#" class="btn btn-default btn-flat">Profile</a>
+      </div>
+      <div class="pull-right">
+        <%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-default btn-flat" %>
+      </div>
+    </li>
+  </ul>
+</li>

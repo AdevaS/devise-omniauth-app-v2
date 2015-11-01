@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'dashsboard' => 'dashboards#index'
-  get '/dashsboard' => 'dashboards#index', as: :user_root
+  get 'dashboard' => 'dashboards#index'
+  get '/dashboard' => 'dashboards#index', as: :user_root
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   #get 'welcome' => 'pages#home'
