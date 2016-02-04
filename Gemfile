@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Using devise for authentication
 gem 'devise'
 
+# Using Delayed_Job to handle the devise e-mail service asynchronously
+gem 'delayed_job_active_record'
+
 # Omniauth authentication
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
