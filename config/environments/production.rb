@@ -64,6 +64,22 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  # Devise configuration.
+  config.action_mailer.default_url_options = { host: 'http://ghostly-dracula-1124.herokuapp.com' }
+
+  # Mailer SMTP configuration.
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  address: "smtp.mailgun.org",
+  port: 587,
+  domain: "sandbox8de9112ec9e2473f9e0455c20917d465.mailgun.org",
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: "postmaster@sandbox8de9112ec9e2473f9e0455c20917d465.mailgun.org",
+  password: "352adc87353de8646ca51efa8877329a"
+  }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
