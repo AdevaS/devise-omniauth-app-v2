@@ -198,12 +198,15 @@ PLATFORMS
 
 DEPENDENCIES
   adminlte-rails
-  byebug
+  bcrypt (= 3.1.10)
+  byebug (= 6.0.2)
   coffee-rails (~> 4.1.0)
+  debug_inspector (= 0.0.2)
   delayed_job_active_record
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri (= 1.6.6.2)
   omniauth-facebook
   omniauth-google-oauth2
   pg (= 0.18.1)
@@ -212,7 +215,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  sqlite3
+  sqlite3 (= 1.3.11)
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)

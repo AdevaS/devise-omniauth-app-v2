@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 
-gem 'sqlite3', group: :development
+gem 'sqlite3', '1.3.11', group: :development
 # Used for Heroku deployment
 gem 'pg', '0.18.1', group: :production
 gem 'rails_12factor', group: :production
@@ -42,7 +43,10 @@ gem 'omniauth-google-oauth2'
 gem 'adminlte-rails'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '3.1.10'
+
+gem 'nokogiri', '1.6.6.2'
+gem 'debug_inspector', '0.0.2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -52,7 +56,7 @@ gem 'adminlte-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', '6.0.2'
 end
 
 group :development do
