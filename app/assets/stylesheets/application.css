@@ -10,12 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap
- *= require font-awesome
- *= require ionicons
- *= require iCheck/all
- *= require datatables/dataTables.bootstrap
- *= require admin-lte
+ *= require bootstrap/css/bootstrap.min
+ *= require plugins/datatables/dataTables.bootstrap
+ *= require plugins/iCheck/square/blue.css
+ *= require dist/css/skins/skin-blue
+ *= require dist/css/AdminLTE.min
  *= require_tree .
  *= require_self
  */

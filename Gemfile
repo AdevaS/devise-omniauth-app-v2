@@ -40,7 +40,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 # Layout: Admin-LTE
-gem 'adminlte-rails'
+# gem 'adminlte-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.10'

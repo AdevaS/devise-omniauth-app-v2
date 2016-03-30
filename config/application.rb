@@ -25,5 +25,8 @@ module DeviseOmniauthAppV2
 
     # Setting delayed_job as the adapter to handle sending asynchronous e-mails
     config.active_job.queue_adapter = :delayed_job
+
+    # Whitelist
+    config.web_console.whitelisted_ips = '10.0.2.2'
   end
 end
